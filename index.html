@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verdinha Mates - Recursos Humanos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="layout">
+
+        <!-- MENU LATERAL -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">🌿</div>
+                <div>
+                    <h2>Verdinha</h2>
+                    <span>Mates</span>
+                </div>
+            </div>
+
+            <nav class="menu">
+
+                <a href="#" class="menu-item active" data-page="inicio">
+                    🏠
+                    <span>Início</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="funcionarios">
+                    👥
+                    <span>Funcionários</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="candidatos">
+                    📄
+                    <span>Candidatos</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="vagas">
+                    💼
+                    <span>Vagas</span>
+                </a>
+
+                <a href="#" class="menu-item" data-page="dashboard">
+                    📊
+                    <span>Dashboard</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Sistema de RH</p>
+                <small>Verdinha Mates © 2026</small>
+            </div>
+
+        </aside>
+
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+
+            <!-- CABEÇALHO -->
+            <header class="topbar">
+
+                <div>
+                    <h1 id="page-title">Início</h1>
+                    <p id="page-subtitle">
+                        Bem-vindo ao sistema de Recursos Humanos
+                    </p>
+                </div>
+
+                <div class="user">
+                    <div class="user-icon">👤</div>
+
+                    <div>
+                        <strong>Administrador</strong>
+                        <span>Recursos Humanos</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- PÁGINA INICIAL -->
+            <section id="inicio" class="page active-page">
+
+                <div class="welcome">
+
+                    <div>
+                        <span class="welcome-label">BEM-VINDO AO SISTEMA</span>
+
+                        <h2>
+                            Recursos Humanos<br>
+                            <span>Verdinha Mates</span>
+                        </h2>
+
+                        <p>
+                            Gerencie funcionários, candidatos e vagas
+                            de forma simples e organizada.
+                        </p>
+
+                        <button class="primary-button" onclick="abrirPagina('dashboard')">
+                            Ver Dashboard
+                        </button>
+                    </div>
+
+                    <div class="welcome-image">
+                        🌿
+                    </div>
+
+                </div>
+
+
+                <div class="cards">
+
+                    <div class="info-card">
+                        <div class="card-icon green">👥</div>
+                        <div>
+                            <span>Funcionários</span>
+                            <strong id="total-funcionarios">35</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon blue">📄</div>
+                        <div>
+                            <span>Candidatos</span>
+                            <strong id="total-candidatos">18</strong>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="card-icon orange">💼</div>
+                        <div>
+                            <span>Vagas abertas</span>
+                            <strong id="total-vagas">4</strong>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FUNCIONÁRIOS -->
+            <section id="funcionarios" class="page">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Funcionários</h2>
+                        <p>Gerencie os funcionários da empresa.</p>
+                    </div>
+
+                    <button class="primary-button" onclick="mostrarMensagem('Cadastro de funcionário em desenvolvimento!')">
+                        + Novo funcionário
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Cargo</th>
+                                <th>Setor</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>João da Silva</td>
+                                <td>Vendedor</td>
+                                <td>Vendas</td>
+                                <td><span class="status active">Ativo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Maria Oliveira</td>
+                                <td>Assistente RH</td>
+                                <td>Recursos Humanos</td>
+                                <td><span class="status active">Ativo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Pedro Souza</td>
+                                <td>Operador</td>
+                                <td>Produção</td>
+                                <td><span class="status active">Ativo</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Ana Costa</td>
+                                <td>Gerente</td>
+                                <td>Administrativo</td>
+                                <td><span class="status active">Ativo</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- CANDIDATOS -->
+            <section id="candidatos" class="page">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Candidatos</h2>
+                        <p>Acompanhe os candidatos aos processos seletivos.</p>
+                    </div>
+
+                    <button class="primary-button" onclick="mostrarMensagem('Cadastro de candidato em desenvolvimento!')">
+                        + Novo candidato
+                    </button>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Cargo pretendido</th>
+                                <th>Formação</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>Lucas Martins</td>
+                                <td>Vendedor</td>
+                                <td>Administração</td>
+                                <td><span class="status waiting">Em análise</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Carolina Lima</td>
+                                <td>Assistente RH</td>
+                                <td>Gestão de RH</td>
+                                <td><span class="status approved">Aprovado</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Rafael Alves</td>
+                                <td>Operador</td>
+                                <td>Ensino Médio</td>
+                                <td><span class="status waiting">Em análise</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- VAGAS -->
+            <section id="vagas" class="page">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Vagas</h2>
+                        <p>Gerencie as oportunidades disponíveis.</p>
+                    </div>
+
+                    <button class="primary-button" onclick="mostrarMensagem('Cadastro de vaga em desenvolvimento!')">
+                        + Nova vaga
+                    </button>
+
+                </div>
+
+
+                <div class="job-grid">
+
+                    <div class="job-card">
+
+                        <div class="job-header">
+                            <span class="job-icon">💼</span>
+                            <span class="status active">Aberta</span>
+                        </div>
+
+                        <h3>Vendedor</h3>
+
+                        <p>
+                            Profissional para atuar na área de vendas
+                            dos produtos Verdinha Mates.
+                        </p>
+
+                        <div class="job-info">
+                            📍 Vendas
+                        </div>
+
+                        <div class="job-info">
+                            💰 A combinar
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-card">
+
+                        <div class="job-header">
+                            <span class="job-icon">📦</span>
+                            <span class="status active">Aberta</span>
+                        </div>
+
+                        <h3>Auxiliar de Produção</h3>
+
+                        <p>
+                            Auxiliar nas atividades relacionadas
+                            à produção de erva-mate.
+                        </p>
+
+                        <div class="job-info">
+                            📍 Produção
+                        </div>
+
+                        <div class="job-info">
+                            💰 A combinar
+                        </div>
+
+                    </div>
+
+
+                    <div class="job-card">
+
+                        <div class="job-header">
+                            <span class="job-icon">💻</span>
+                            <span class="status active">Aberta</span>
+                        </div>
+
+                        <h3>Assistente Administrativo</h3>
+
+                        <p>
+                            Auxiliar nas atividades administrativas
+                            da empresa.
+                        </p>
+
+                        <div class="job-info">
+                            📍 Administrativo
+                        </div>
+
+                        <div class="job-info">
+                            💰 A combinar
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- DASHBOARD -->
+            <section id="dashboard" class="page">
+
+                <div class="section-header">
+
+                    <div>
+                        <h2>Dashboard</h2>
+                        <p>Visão geral dos Recursos Humanos.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-cards">
+
+                    <div class="dashboard-card green-card">
+                        <span>👥</span>
+                        <p>Total de funcionários</p>
+                        <strong>35</strong>
+                    </div>
+
+                    <div class="dashboard-card blue-card">
+                        <span>📄</span>
+                        <p>Total de candidatos</p>
+                        <strong>18</strong>
+                    </div>
+
+                    <div class="dashboard-card orange-card">
+                        <span>💼</span>
+                        <p>Vagas abertas</p>
+                        <strong>4</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-content">
+
+                    <div class="panel">
+
+                        <h3>Funcionários por setor</h3>
+
+                        <div class="bar-item">
+                            <div>
+                                <span>Produção</span>
+                                <strong>15</strong>
+                            </div>
+
+                            <div class="bar">
+                                <div style="width: 80%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="bar-item">
+                            <div>
+                                <span>Vendas</span>
+                                <strong>10</strong>
+                            </div>
+
+                            <div class="bar">
+                                <div style="width: 55%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="bar-item">
+                            <div>
+                                <span>Administrativo</span>
+                                <strong>6</strong>
+                            </div>
+
+                            <div class="bar">
+                                <div style="width: 40%;"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="bar-item">
+                            <div>
+                                <span>RH</span>
+                                <strong>4</strong>
+                            </div>
+
+                            <div class="bar">
+                                <div style="width: 25%;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel">
+
+                        <h3>Resumo</h3>
+
+                        <div class="summary-item">
+                            <span>Funcionários ativos</span>
+                            <strong>35</strong>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Candidatos em análise</span>
+                            <strong>12</strong>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Vagas abertas</span>
+                            <strong>4</strong>
+                        </div>
+
+                        <div class="summary-item">
+                            <span>Setores</span>
+                            <strong>4</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
