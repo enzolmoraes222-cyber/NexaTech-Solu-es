@@ -1,31 +1,30 @@
-/* ==========================================
+/* =========================================
    VERDINHA MATES
    SISTEMA DE RECURSOS HUMANOS
-   ========================================== */
+   ========================================= */
 
 /* RESET */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* CONFIGURAÇÕES GERAIS */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f7f4;
-    color: #26352a;
-    min-height: 100vh;
+    background-color: #f2f5f3;
+    color: #333;
 }
 
-/* ==========================================
-   TOPO
-   ========================================== */
+/* =========================================
+   CABEÇALHO
+   ========================================= */
 
 .topo {
     width: 100%;
     height: 80px;
-    background-color: #176b36;
+    background-color: #176b3a;
     color: white;
 
     display: flex;
@@ -36,49 +35,52 @@ body {
 }
 
 .logo h1 {
-    font-size: 25px;
-    margin-bottom: 3px;
+    font-size: 26px;
+    font-weight: bold;
 }
 
 .logo p {
-    font-size: 13px;
-    opacity: 0.9;
+    font-size: 14px;
+    margin-top: 4px;
+    color: #d9f0df;
 }
 
-/* ==========================================
-   BOTÃO MENU
-   ========================================== */
+/* =========================================
+   BOTÃO DO MENU
+   ========================================= */
 
 .menu-button {
     display: none;
 
+    background: none;
     border: none;
-    background-color: transparent;
-    color: white;
 
+    color: white;
     font-size: 28px;
+
     cursor: pointer;
 }
 
-/* ==========================================
-   LAYOUT
-   ========================================== */
+/* =========================================
+   ÁREA PRINCIPAL
+   ========================================= */
 
 .layout {
     display: flex;
     min-height: calc(100vh - 130px);
 }
 
-/* ==========================================
+/* =========================================
    MENU LATERAL
-   ========================================== */
+   ========================================= */
 
 .menu {
     width: 230px;
-    background-color: #ffffff;
-    border-right: 1px solid #dce5dd;
+    background-color: white;
 
     padding: 25px 15px;
+
+    border-right: 1px solid #ddd;
 }
 
 .menu nav {
@@ -90,74 +92,75 @@ body {
 .menu-link {
     display: block;
 
+    padding: 13px 15px;
+
+    color: #333;
     text-decoration: none;
-    color: #35443a;
 
-    padding: 14px 16px;
+    border-radius: 7px;
 
-    border-radius: 8px;
-
-    font-size: 16px;
+    font-size: 15px;
 
     transition: 0.2s;
 }
 
 .menu-link:hover {
-    background-color: #e8f4eb;
-    color: #176b36;
+    background-color: #e7f3ea;
+    color: #176b3a;
 }
 
 .menu-link.ativo {
-    background-color: #176b36;
+    background-color: #176b3a;
     color: white;
 }
 
-/* ==========================================
+/* =========================================
    CONTEÚDO
-   ========================================== */
+   ========================================= */
 
 .conteudo {
     flex: 1;
-    padding: 40px;
+    padding: 35px;
 }
 
-/* ==========================================
+/* =========================================
    BOAS-VINDAS
-   ========================================== */
+   ========================================= */
 
 .boas-vindas {
     background-color: white;
 
     padding: 30px;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
-    border-left: 5px solid #176b36;
+    border-left: 5px solid #176b3a;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .boas-vindas h2 {
-    color: #176b36;
-    margin-bottom: 12px;
+    color: #176b3a;
     font-size: 28px;
+    margin-bottom: 12px;
 }
 
 .boas-vindas p {
+    color: #666;
     margin-bottom: 8px;
-    color: #5b665e;
 }
 
-.data {
-    margin-top: 20px;
+.boas-vindas .data {
+    margin-top: 18px;
+    color: #333;
     font-weight: bold;
 }
 
-/* ==========================================
+/* =========================================
    CARDS
-   ========================================== */
+   ========================================= */
 
 .cards {
     display: grid;
@@ -172,48 +175,48 @@ body {
 
     padding: 25px;
 
-    border-radius: 12px;
+    border-radius: 10px;
 
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s, box-shadow 0.2s;
 
     cursor: pointer;
-
-    transition: 0.2s;
 }
 
 .card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 .icone {
-    font-size: 30px;
-
     display: block;
+
+    font-size: 32px;
 
     margin-bottom: 15px;
 }
 
 .card h3 {
-    color: #176b36;
-
-    margin-bottom: 10px;
+    color: #176b3a;
 
     font-size: 19px;
+
+    margin-bottom: 10px;
 }
 
 .card p {
-    color: #69736c;
+    color: #666;
 
     font-size: 14px;
 
     line-height: 1.5;
 }
 
-/* ==========================================
+/* =========================================
    RODAPÉ
-   ========================================== */
+   ========================================= */
 
 footer {
     height: 50px;
@@ -222,24 +225,28 @@ footer {
     align-items: center;
     justify-content: center;
 
-    background-color: #123f24;
+    background-color: #12552e;
 
     color: white;
 
     font-size: 13px;
 }
 
-/* ==========================================
-   RESPONSIVIDADE
-   ========================================== */
+/* =========================================
+   TABLET
+   ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
 }
+
+/* =========================================
+   CELULAR
+   ========================================= */
 
 @media (max-width: 700px) {
 
@@ -257,7 +264,7 @@ footer {
         width: 100%;
 
         border-right: none;
-        border-bottom: 1px solid #dce5dd;
+        border-bottom: 1px solid #ddd;
     }
 
     .menu.aberto {
@@ -265,7 +272,7 @@ footer {
     }
 
     .conteudo {
-        padding: 25px 20px;
+        padding: 20px;
     }
 
     .cards {
@@ -273,6 +280,10 @@ footer {
     }
 
 }
+
+/* =========================================
+   CELULAR PEQUENO
+   ========================================= */
 
 @media (max-width: 450px) {
 
@@ -284,8 +295,16 @@ footer {
         font-size: 21px;
     }
 
+    .logo p {
+        font-size: 12px;
+    }
+
     .boas-vindas {
-        padding: 22px;
+        padding: 20px;
+    }
+
+    .boas-vindas h2 {
+        font-size: 23px;
     }
 
 }
